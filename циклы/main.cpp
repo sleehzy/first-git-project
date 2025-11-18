@@ -99,8 +99,8 @@ int main()
 	*/
 
 	setlocale(LC_ALL, "ru");
-
-	int numbers[6];
+	srand(time(NULL));
+	/*int numbers[6];
 
 	int sum = 0;
 
@@ -120,8 +120,34 @@ int main()
 		std::cout << numbers[i] << " ";
 	}
 
-	std::cout << "\n—умма чисел; " << sum;
+	std::cout << "\n—умма чисел; " << sum;*/
 
-	
+	/*const int size = 10;
+	int arr[size]{};
+	int sum = 0;
+
+	std::cout << "¬ведите 6 целых чисел:\n";
+
+	for (int i = 0; i < 6; i++)
+	{
+		arr[i] = rand() % 10 + 1;
+		sum += arr[i];
+
+	}
+
+	std::cout << "¬веденный массив; ";
+	for (int i = 0; i < 6; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+
+	std::cout << "\n—умма чисел; " << sum;*/
+
+
+
+
+
+
+
 	return 0;
 }
