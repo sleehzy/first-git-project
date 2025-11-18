@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <Windows.h>
 /*
@@ -97,26 +98,30 @@ int main()
 	
 	*/
 
+	setlocale(LC_ALL, "ru");
 
-	/*const int size = 10;
-	
-	int arr[size]{};
-	
-	for (int i = 0; i < size; i++) 
+	int numbers[6];
+
+	int sum = 0;
+
+	std::cout << "¬ведите 6 целых чисел:\n";
+
+	for (int i = 0; i < 6; i++) 
 	{
-		arr[i] = i + 1;
-		std::cout << arr[i] << " ";
+	 std::cout << "„исло " << i + 1 << ": ";
+	 std::cin >> numbers[i];
+	 sum += numbers[i];
+
 	}
 
-	std::cout << "\n\n";
+	std::cout << "¬веденный массив; ";
+	for (int i = 0; i < 6; i++) 
+	{
+		std::cout << numbers[i] << " ";
+	}
 
-		for (int i = size - 1; i >= 0; i--)
-		{
-			std::cout << arr[i] << " ";
-		}*/
+	std::cout << "\n—умма чисел; " << sum;
 
-
-    
-
+	
 	return 0;
 }
