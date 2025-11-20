@@ -125,23 +125,72 @@ int main()
 	/*const int size = 10;
 	int arr[size]{};
 	int sum = 0;
+	int sum2 = 0;
+	int sum3 = 0;
 
 	std::cout << "Введите 6 целых чисел:\n";
 
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < size; i++)
 	{
-		arr[i] = rand() % 10 + 1;
+		arr[i] = rand() % 21 - 10;
 		sum += arr[i];
 
 	}
 
+
 	std::cout << "Введенный массив; ";
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < size; i++)
 	{
-		std::cout << arr[i] << " ";
+		std::cout << arr[i] << " " ;
 	}
 
-	std::cout << "\nСумма чисел; " << sum;*/
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] % 2 == 0)
+		{
+			std::cout << "\nЧетные числа: " << arr[i] ;
+		}
+		
+	}
+
+	std::cout << "\n\n";
+
+	for (int i = 0; i < size; i++) 
+	{
+		if (arr[i] % 2 != 0) 
+		{
+			std::cout << "\nНечетные числа: " << arr[i];
+		}
+
+
+	}
+
+	std::cout << "\n\n";
+
+	for (int i = 0; i < size; i++) 
+	{
+		if (arr[i] > 0) 
+		{
+			sum2 = sum2 + arr[i];
+		}
+
+	}
+
+	for (int i = 0; i < size; i++) 
+	{
+		if (arr[i] < 0) 
+		{
+		 sum3 += arr[i];
+		}
+
+		
+	}
+
+
+	std::cout << "Сумма всех положительных: " << sum2;
+	std::cout << "\n\n";
+	std::cout << "Сумма отрицательных; " << sum3;*/
+
 
 
 
