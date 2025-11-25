@@ -192,9 +192,52 @@ int main()
 	std::cout << "Сумма отрицательных; " << sum3;*/
 
 
+	
 
 
+	const int row = 3, col = 4;
 
+	int arr2[row][col]{};
+
+	int sum_row[row], sum_col[col];
+
+
+	for (int i = 0; i < row; i++) 
+	{
+		for (int k = 0; k < col; k++) 
+		{
+			arr2[i][k] = rand() % 10;
+		}
+	}
+	
+	for (int i = 0; i < row; i++)
+	{
+		for (int k = 0; k < col; k++) 
+		{
+			std::cout << "A[" << i << "][" << k << "] = ";
+			std::cin >> arr2[i][k];
+		}
+	}
+
+
+	for (int i = 0; i < row; i++) 
+	{
+		for (int k = 0; k < col; k++) 
+		{
+			std::cout << arr2[i][k] << "\t";
+		}
+		std::cout << " ";
+	}
+
+	for (int i = 0; i < row; i++) 
+	{
+		sum_row[i] = 0;
+		for (int k = 0; k < col; k++) 
+		{
+			sum_row[i] += arr2[i][k];
+		}
+		std::cout << "\nсумма строки " << i + 1 << " = " << sum_row[i] << "\n";
+	}
 
 
 
