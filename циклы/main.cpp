@@ -91,6 +91,99 @@ int main()
 			}
 			*/ 
 
+/*void fillArr(int arr[], int size)
+{
+	for (int i = 0; i < size; i++) 
+	{
+		arr[i] = rand() % 100;
+	}
+}
+
+void fillArr(double arr[], int size)
+{
+	for (int i = 0; i < size; i++) 
+    {
+		arr[i] = static_cast<double>(rand()) / RAND_MAX * 100;
+	}
+}
+
+void fillArr(bool arr[], int size)
+{
+ for (int i = 0; i < size; i++) 
+ {
+	 arr[i] = rand() % 2;
+ }
+}
+
+void fillArr(char arr[], int size)
+{
+	for (int i = 0; i < size; i++) 
+	{
+		arr[i] = 'a' + rand() % 26;
+	}
+}
+
+
+
+void printArr(int arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";
+}
+
+
+void printArr(double arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";
+}
+
+
+void printArr(bool arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";
+}
+
+
+void printArr(char arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";
+}*/
+
+int sum(int a, int b)
+{
+	if (b == 0)
+	{
+		return a;
+	}
+	if (b < 0)
+	{
+		return sum(a - 1, b + 1);
+	}
+
+	else 
+	{
+		return sum(a + 1, b - 1);
+	}
+	
+
+}
+
+
 int main()
 {
 	/*
@@ -100,6 +193,7 @@ int main()
 
 	setlocale(LC_ALL, "ru");
 	srand(time(NULL));
+
 	/*int numbers[6];
 
 	int sum = 0;
@@ -191,11 +285,7 @@ int main()
 	std::cout << "\n\n";
 	std::cout << "Сумма отрицательных; " << sum3;*/
 
-
-	
-
-
-	const int row = 3, col = 4;
+	/*const int row = 3, col = 4;
 
 	int arr2[row][col]{};
 
@@ -237,9 +327,44 @@ int main()
 			sum_row[i] += arr2[i][k];
 		}
 		std::cout << "\nсумма строки " << i + 1 << " = " << sum_row[i] << "\n";
-	}
+	}*/
+
+    /*const int size = 6;
+
+
+ int intArr[size];
+ double doubleArr[size];
+ bool boolArr[size];
+ char charArr[size];
+
+ fillArr(intArr, size);
+ fillArr(doubleArr, size);
+ fillArr(boolArr, size);
+ fillArr(charArr, size);
+
+ std::cout << "Массив int: ";
+
+ printArr(intArr, size);
+
+ std::cout << "Массив double: ";
+
+ printArr(doubleArr, size);
+
+ std::cout << "Массив bool: ";
+
+ printArr(boolArr, size);
+
+ std::cout << "Массив char: ";
+
+ printArr(charArr, size);*/
+
+ int num1 = -500;
+ int num2 = -3;
+
+ std::cout << "Сумма чисел " << num1 << " и " << num2 << " равна " << sum(num1, num2);
 
 
 
-	return 0;
+
+ return 0;
 }
