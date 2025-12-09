@@ -164,7 +164,7 @@ void printArr(char arr[], int size)
 	std::cout << "\n";
 }*/
 
-int sum(int a, int b)
+/*int sum(int a, int b)
 {
 	if (b == 0)
 	{
@@ -180,6 +180,46 @@ int sum(int a, int b)
 		return sum(a + 1, b - 1);
 	}
 	
+
+}*/
+
+/*template <typename Arr>
+double arifm(Arr arr[], int size)
+{
+	if (std::is_same<Arr, char>::value_entA == true)
+	{
+		std::cout << "Нельзя посчитать не на числовом массиве! Поэтому: ";
+		return 0.0;
+	}
+	else if (std::is_same<Arr, bool>::value == true)
+	{
+		std::cout << "Нельзя посчитать не на числовом массиве! Поэтому: ";
+		return 0.0;
+	}
+	else
+	{
+		double result = 0.0;
+		for (int i = 0; i < size; i++)
+		{
+			result += arr[i];
+		}
+		return result / size;
+	}
+
+
+	return 0;
+
+}*/
+
+void Moo(int *c) 
+{
+	*c += 2;
+
+}
+
+void Moo2(int* &c)
+{
+	c += 2;
 
 }
 
@@ -358,10 +398,17 @@ int main()
 
  printArr(charArr, size);*/
 
- int num1 = -500;
+    /*int num1 = -500;
  int num2 = -3;
 
- std::cout << "Сумма чисел " << num1 << " и " << num2 << " равна " << sum(num1, num2);
+ std::cout << "Сумма чисел " << num1 << " и " << num2 << " равна " << sum(num1, num2);*/
+
+
+ int a = 5;
+
+ Moo2(a);
+
+ std::cout << a << "\n\n";
 
 
 
