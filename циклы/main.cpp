@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <Windows.h>
+#include <type_traits>
 /*
 int main()
 {
@@ -217,7 +218,7 @@ void Moo(int *c)
 
 }
 
-void Moo2(int* &c)
+void Moo2(int &c)
 {
 	c += 2;
 
@@ -404,11 +405,11 @@ int main()
  std::cout << "Сумма чисел " << num1 << " и " << num2 << " равна " << sum(num1, num2);*/
 
 
- int a = 5;
+int arr[5]{ 3,4,5,1,3 };
 
- Moo2(a);
+ 
 
- std::cout << a << "\n\n";
+ std::cout << *arr;
 
 
 
