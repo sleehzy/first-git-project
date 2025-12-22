@@ -212,17 +212,45 @@ double arifm(Arr arr[], int size)
 
 }*/
 
-void Moo(int *c) 
-{
-	*c += 2;
 
-}
+//void Pushback(int * arr, int size) // size = 5 долгий способ добавлении €чейки пам€ти в динамический массив. 1 способ
+//{
+//	int* temp = new int[size];
+//
+//	for (int i = 0; i < size; i++)
+//	{
+//		temp[i] = arr[i];
+//	}
+//	delete[] arr;
+//	size++;
+//	arr = new int[size];
+//
+//	for (int i = 0; i < size - 1; i++)
+//	{
+//		arr[i] = temp[i];
+//	}
+//
+//	delete[] temp;
+//
+//}
+//
+//void Pushback2(int*& arr, int size, int data) //более коротка€ верси€. 2 cпособ
+//{
+//	size++;
+//	int* temp = new int[size];
+//	for ( int i = 0; i < size - 1; i++)
+//	{
+//		temp[i] = arr[i];
+//	}
+//	std::swap(temp, arr);
+//
+//	arr[size - 1] = data;
+//
+//
+//	delete[]temp;
+//}
 
-void Moo2(int &c)
-{
-	c += 2;
 
-}
 
 
 int main()
@@ -404,15 +432,45 @@ int main()
 
  std::cout << "—умма чисел " << num1 << " и " << num2 << " равна " << sum(num1, num2);*/
 
+    /*int size = 5, data = 0;// увелечение на одну €чеейку у динамического массива
+ int* qwe = new int[size] {1, 4, 2, 5, 6};
 
-int arr[5]{ 3,4,5,1,3 };
-
- 
-
- std::cout << *arr;
+ std::cin >> data;
 
 
+ Pushback2(qwe, size, data);
+ for (int i = 0; i < size; i++) 
+ {
+	 std::cout << qwe[i] << " ";
+ }
 
+
+	 delete[] qwe;*/
+
+ const int row = 3, col = 4;
+
+
+ int **arr = new int*[row];
+ for (int i = 0; i < row; i++)
+ {
+	 std::cin >> col;
+	 arr[i] = new int[col];
+ }
+ arr[0][3] = 9;
+
+ for(int i = 0; i < row; i++) 
+ {
+	 for(int i = 0; j < col; j++)
+	 {
+		 arr[i][j] = rand() % 10;
+	 }
+ }
+
+
+
+ delete[]arr;
+ int *a = nullptr;
+ arr = nullptr;
 
  return 0;
 }
