@@ -2,6 +2,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <type_traits>
+#include <string>
 /*
 int main()
 {
@@ -260,7 +261,10 @@ int main()
 	
 	*/
 
-	setlocale(LC_ALL, "ru");
+	//setlocale(LC_ALL, "ru");
+
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	srand(time(NULL));
 
 	/*int numbers[6];
@@ -447,7 +451,7 @@ int main()
 
 	 delete[] qwe;*/
 
- const int row = 3, col = 4;
+    /*const int row = 3, col = 4;
 
 
  int **arr = new int*[row];
@@ -470,7 +474,112 @@ int main()
 
  delete[]arr;
  int *a = nullptr;
- arr = nullptr;
+ arr = nullptr;*/
+
+    /*int side = 2, row = 3, col = 4;
+
+ int*** arr = new int** [side];
+ 
+ for (int i = 0; i < side; i++) 
+ {
+	 arr[i] = new int*[row];
+	 for(int j = 0; j < row; j++)
+	 {
+		 arr[i][j] = new int[col];
+		 col++;
+	 }
+	 row++;
+ }
+ arr[1][0][3];
+
+ for(int i = side - 1; i >= 0; i--)
+ {
+	 for(int j = 0; j < row; j++)
+	 {
+		 delete[]arr[i][j];
+	 }
+	 row--;
+	 delete[]arr[i];
+ }
+ delete[]arr;*/
+
+    /*int s1 = 2, s2 = 3, s3 = 4, s4 = 5, s5 = 6, s6 = 7, s7 = 8, s8 = 9, s9 = 10, s10 = 11;
+ 
+  s1-Страна 
+  s2-Область
+  s3-Город
+  s4-Улица
+  s5-Дом
+  s6-Этаж
+  s7-Аудитория
+  s8-столб
+  s9-Ряд
+  s10-Место
+ 
+
+ int********** kek = new int********* [s1];
+
+ for(int a1 = 0; a1 < s1; a1++)
+ {
+	 kek[a1] = new int******** [s2];
+	 for (int a2 = 0; a2 < s2; a2++) 
+	 {
+		 kek[a1][a2] = new int******* [s3];
+		 for (int a3 = 0; a3 < s3; a3++) 
+		 {
+			kek[a1][a2][a3] = new int****** [s4];
+			for (int a4 = 0; a4 < s4; a4++)
+			{
+				kek[a1][a2][a3][a4] = new int***** [s5];
+				for (int a5 = 0; a5 < s5; a5++)
+				{
+					kek[a1][a2][a3][a4][a5] = new int**** [s6];
+					for (int a6 = 0; a6 < s6; a6++)
+					{
+						kek[a1][a2][a3][a4][a5][a6] = new int*** [s7];
+						for (int a7 = 0; a7 < s7; a7++)
+						{
+							kek[a1][a2][a3][a4][a5][a6][a7] = new int** [s8];
+							for (int a8 = 0; a8 < s8; a8++)
+							{
+								kek[a1][a2][a3][a4][a5][a6][a7][a8] = new int* [s9];
+								for (int a9 = 0; a9 < s9; a9++)
+								{
+									kek[a1][a2][a3][a4][a5][a6][a7][a8][a9] = new int[s10];
+									for (int a10 = 0; a10 < s10; a10++)
+									{
+										kek[a1][a2][a3][a4][a5][a6][a7][a8][a9][a10] = rand() % 9 + 1;
+										std::cout << kek[a1][a2][a3][a4][a5][a6][a7][a8][a9][a10] << " ";
+									}
+									std::cout << "\t\t" << a9 << "a9\n" << a8 << "a8\n" << a7 << "a7\n" << a6 << "a6\n" << a5 << "a5\n"
+										<< a4 << "a4\n" << a3 << "a3\n" << a2 << "a2\n" << a1 << "a1\n";
+								}
+								//std::cout << "\t\t" << a8 << "a8\n";
+							}
+							//std::cout << "\t\t" << a7 << "a7\n";
+						}
+						//std::cout << "\t\t" << a6 << "a6\n";
+					}
+					//std::cout << "\t\t" << a5 << "a5\n";
+				}
+				//std::cout << "\t\t" << a4 << "a4\n";
+			}
+			//std::cout << "\t\t" << a3 << "a3\n";
+		 }
+		 //std::cout << "\t\t" << a2 << "a2\n";
+	 }
+	 //std::cout << "\t\t" << a1 << "a1\n";
+ }*/
+
+
+
+
+
+ std::string a;
+ std::getline(std::cin, a );
+ std::cout << a;
+
+
 
  return 0;
 }
