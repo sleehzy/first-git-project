@@ -1,8 +1,10 @@
 
-#include <iostream>
 #include <Windows.h>
 #include <type_traits>
 #include <string>
+#include "author.hpp"
+
+
 /*
 int main()
 {
@@ -251,6 +253,41 @@ double arifm(Arr arr[], int size)
 //	delete[]temp;
 //}
 
+/*регистрация*/
+/*bool PassDigit(const std::string& currentPass)
+{
+	for (int i = 0; i < currentPass.size(); i++)
+	{
+		if (std::isdigit(currentPass[i]))
+		{
+			return true;
+		}
+	}
+	return false;
+}*/
+
+/*bool PassChar(const std::string& currentPass)
+{
+	for (int i = 0; i < currentPass.size(); i++)
+	{
+		for (char c = 65; c <= 90; c++)
+		{
+			if (currentPass[i] == c)
+			{
+				return true;
+			}
+		}
+		for (char c = 97; c <= 122; c++)
+		{
+			if (currentPass[i] == c)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}*/
+
 
 
 
@@ -262,10 +299,12 @@ int main()
 	*/
 
 	//setlocale(LC_ALL, "ru");
-
+	
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
+
+	PrintHelloWorld();
 
 	/*int numbers[6];
 
@@ -571,14 +610,69 @@ int main()
 	 //std::cout << "\t\t" << a1 << "a1\n";
  }*/
 
+ /*авторизация через стриг*/
+    /*std::string login, password, loginInput, passwordInput;
+ int loginMin = 3, loginMax = 15, passMin = 8, passMax = 30;
 
+ while(true)
+ {
+	 std::cout << "Введите новый логин: ";
+	 std::getline(std::cin, login, '\n');
 
+	 std::cout << "Введите новый пароль: ";
+	 std::getline(std::cin, password, '\n');
+	 if(login.size() < loginMin || login.size() > loginMax)
+	 {
+		 std::cout << "Недопустимая длина логина. должно быть от " << loginMin << " до " << loginMax << '\n\n';
+	     Sleep(1500);
+		 system("cls");
+	 }
+	 else if (password.size() < passMin || password.size() > passMax)
+	 {
+		 std::cout << "Недопустимая длина пароля. должно быть от " << passMin << " до " << passMax << '\n\n';
+		 Sleep(1500);
+		 system("cls");
+	 }
+	 else
+	 {
+		 if (PassDigit(password) && PassChar(password))
+		 {
+			 std::cout << "Регистрация прошла успешно";
+			 break;
+		 }
+		 else
+		 {
+			 std::cout << "Ошибка введите пароль снова с одной цифрой одной буквой в наличии";
+		 }
 
+	 }
 
- std::string a;
- std::getline(std::cin, a );
- std::cout << a;
+	 Sleep(1500);
+	 system("cls");
+ }
 
+ while (true)
+ {
+	 std::cout << "Ввелите ваш логин: ";
+	 std::getline(std::cin, loginInput, '\n');
+
+	 std::cout << "Ввелите ваш пароль: ";
+	 std::getline(std::cin, passwordInput, '\n');
+
+		 if (login == loginInput && password == passwordInput)
+		 {
+			 std::cout << "Авторизация прошла успешно! Добро пожаловать! \n\n";
+			 Sleep(1500);
+			 system("cls");
+			 break;
+		 }
+	 std::cout << "Ошибка логина или пароля \n";
+	 Sleep(1500);
+	 system("cls");
+
+ }*/
+
+ 
 
 
  return 0;
