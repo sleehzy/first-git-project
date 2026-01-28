@@ -254,7 +254,7 @@ double arifm(Arr arr[], int size)
 //}
 
 /*регистрация*/
-/*bool PassDigit(const std::string& currentPass)
+bool PassDigit(const std::string& currentPass)
 {
 	for (int i = 0; i < currentPass.size(); i++)
 	{
@@ -264,9 +264,9 @@ double arifm(Arr arr[], int size)
 		}
 	}
 	return false;
-}*/
+}
 
-/*bool PassChar(const std::string& currentPass)
+bool PassChar(const std::string& currentPass)
 {
 	for (int i = 0; i < currentPass.size(); i++)
 	{
@@ -286,7 +286,7 @@ double arifm(Arr arr[], int size)
 		}
 	}
 	return false;
-}*/
+}
 
 
 
@@ -611,7 +611,7 @@ int main()
  }*/
 
  /*авторизация через стриг*/
-    /*std::string login, password, loginInput, passwordInput;
+    std::string login, password, loginInput, passwordInput;
  int loginMin = 3, loginMax = 15, passMin = 8, passMax = 30;
 
  while(true)
@@ -670,7 +670,7 @@ int main()
 	 Sleep(1500);
 	 system("cls");
 
- }*/
+ }
 
  
 

@@ -19,7 +19,7 @@
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
     <ClCompile Include="author.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
